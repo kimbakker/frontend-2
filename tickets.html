@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lowlands | Tickets</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/94e2caafcd.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Coiny|Hanalei+Fill&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+
+    <header>
+        <nav class="hoofdmenu">
+            <ul>
+                <li><a href="#">Blokkenschema</a></li>
+                <li><a href="#">Nieuws</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="programma.html">Programma</a></li>
+                <li><a href="index.html"><img src="images/logo.png" alt="logo Lowlands link naar homepage" class="logo-nav"></a></li>
+                <li><a href="tickets.html" class="active-item">Tickets</a></li>
+                <li><a href="#">Plattegrond</a></li>
+                <li><a href="#">English</a></li>
+                <li><a href="#">Meer</a></li>
+            </ul>
+        </nav>
+        <nav class="hoofdmenu responsive">
+            <ul>
+                <li><a href="index.html"><img src="images/logo.png" alt="logo Lowlands link naar homepage" class="logo-nav"></a></li>
+                <li><a href="programma.html">Programma</a></li>
+                <li><a href="#" class="active-item">Tickets</a></li>
+                <li class="menu-meer"><a href="">Meer <i class="fas fa-arrow-up pijl-omhoog fa-rotate-180"></i></a>
+                    <ul class="hoofdmenu responsive dropdown">
+                        <li><a href="#">Blokkenschema</a></li>
+                        <li><a href="#">Nieuws</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Plattegrond</a></li>
+                        <li><a href="#">English</a></li>
+                        <li><a href="#">Extra</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <h1 class="pagina-titel">Tickets</h1>
+    </header>
+    <main class="tickets">
+        <!--https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form-->
+        <form action="ingestuurd.html">
+            <section>
+                <fieldset>
+                    <legend>Soort Ticket</legend>
+                    <ul>
+                        <li><input type="radio" name="ticket" id="festivalticket">
+                            <label for="festivalticket">Festival ticket</label></li>
+                        <li><input type="radio" id="groepsticket" name="ticket" value="groepsticket">
+                            <label for="festivalticket">Groepsticket</label></li>
+                        <li><input type="radio" id="gespreid" name="ticket" value="gespreid">
+                            <label for="festivalticket">Gespreid betalen</label></li>
+                    </ul>
+                </fieldset>
+                <fieldset>
+                    <legend>Verblijf</legend>
+                    <ul>
+                        <li><input type="radio" id="groepscamping" name="verblijf" value="groepscamping">
+                            <label for="groepscamping">Groepscamping</label></li>
+                        <li><input type="radio" id="camper" name="verblijf" value="camper">
+                            <label for="camper">Camper Camping</label></li>
+                        <li><input type="radio" id="glamm" name="verblijf" value="glamm">
+                            <label for="glamm">Gllam-camp</label></li>
+                        <li><input type="radio" id="ntv" name="verblijf" value="ntv">
+                            <label for="ntv">n.v.t.</label></li>
+                    </ul>
+                </fieldset>
+            </section>
+            <section>
+                <fieldset>
+                    <legend>Vervoer</legend>
+                    <ul>
+                        <li><input type="radio" id="parkeren" name="vervoer" value="parkeren">
+                            <label for="parkeren">Parkeerticket</label></li>
+                        <li><input type="radio" id="bus" name="vervoer" value="bus">
+                            <label for="bus">Bus Service</label></li>
+                        <li><input type="radio" id="trein" name="vervoer" value="trein">
+                            <label for="trein">Trein</label></li>
+                        <li><input type="radio" id="ntv" name="vervoer" value="ntv">
+                            <label for="ntv">n.v.t.</label></li>
+                    </ul>
+                </fieldset>
+                <fieldset class="aantal-tickets">
+                    <legend>Aantal tickets</legend>
+                    <select name="aantal" id="ticketaantal">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </fieldset>
+            </section>
+            <section>
+                <!--https://developer.mozilla.org/en-US/docs/Learn/Forms/How_to_structure_a_web_form-->
+                <fieldset>
+                    <legend>Persoonsgegevens</legend>
+                    <p><label for="voornaam">Voornaam</label>
+                        <input name="name" id="voornaam" size="30" placeholder="Voornaam" required></p>
+                    <p><label for="achternaam">Achternaam</label>
+                        <input name="name" id="achternaam" size="30" placeholder="Achternaam" required></p>
+                    <p><label for="email">E-mailadres</label>
+                        <input type="email" id="email" size="30" placeholder="naam@mailadres.nl" required></p>
+                    <p><label for="datum">Geboortedatum</label>
+                        <input type="date" id="datum" name="datum" value="0000-00-00" min="1920-01-01" max="2020-01-01"></p>
+                    <p class="feedback">Dit gedeelte van het formulier is goed ingevuld.</p>
+                </fieldset>
+                <fieldset>
+                    <legend>Adresgegevens</legend>
+                    <p><label for="straatnaam">Straatnaam</label>
+                        <input name="text" id="straatnaam" size="30" placeholder="Straatnaam" required></p>
+                    <p><label for="huisnummer">Huisnummer</label>
+                        <input type="number" id="huisnummer" name="huisnummer" min="1" placeholder="00" required>
+                        <p><label for="woonplaats">Woonplaats</label>
+                            <input name="text" id="woonplaats" size="30" placeholder="Woonplaats" required></p>
+                        <p><label for="postcode">Postcode</label>
+                            <input name="text" id="postcode" size="30" placeholder="1234AB" required></p>
+                        <p class="feedback groen">Dit gedeelte van het formulier is goed ingevuld.</p>
+                </fieldset>
+            </section>
+            <input type="submit" value="Verzenden">
+        </form>
+    </main>
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>

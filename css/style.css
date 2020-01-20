@@ -1,0 +1,691 @@
+/*ALGEMEEN*/
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+main {
+    text-align: center;
+    padding: 0 9vw;
+}
+.active-item {
+    border-bottom: 2px solid #fff;
+}
+a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: rgb(255, 255, 255);
+    transition: width .3s;
+}
+a:hover::after {
+    width: 100%;
+}
+
+
+/*TEKST*/
+header h1, h2 {
+    color: #fff;
+}
+h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+    font-family: 'Coiny', cursive;
+}
+h1.pagina-titel {
+    margin: 0;
+    padding: 20px;
+}
+h2 {
+    color: #fff;
+}
+
+
+/*BUTTONS*/
+
+.button-wit-blauw {
+    display: inline-block;
+    background: #fff;
+    padding: 10px 20px;
+    color: #0125CC;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-bottom: 40px;
+}
+
+/*HEADER*/
+
+header {
+    background: #4CCF66;
+    text-align: center;
+}
+nav.hoofdmenu {
+    background: #0125CC;
+    text-align: center;
+    padding: 10px 9vw;
+}
+nav.hoofdmenu ul {
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0;
+}
+nav.hoofdmenu ul li {
+    padding: 10px 0;
+}
+nav.hoofdmenu ul li a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+/*https://codepen.io/martinwolf/pen/eNNdme*/
+nav.hoofdmenu ul li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: rgb(255, 255, 255);
+    transition: width .3s;
+}
+nav.hoofdmenu ul li a:hover::after {
+    width: 100%;
+}
+nav.hoofdmenu ul li a.active:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: rgb(255, 255, 255);
+}
+.hoofdmenu.responsive {
+    display: none;
+}
+.logo-nav {
+    width: 20px;
+    height: auto;
+}
+input[type="text"] {
+/*    background: none;*/
+    font-family: 'Open Sans', sans-serif;
+    border: none;
+    color: #fff;
+}
+input[type="text"]::-webkit-input-placeholder {
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+.fa-search {
+    color: #fff;
+}
+
+
+/*PROGRAMMA*/
+
+/*
+.filter-sorteren {
+    background-color: #a3a3a3;
+}
+*/
+ul.sorteren-nav {
+    background-color: #a3a3a3;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    text-decoration: none;
+    padding: 15px 0 15px 0;
+}
+ul.sorteren-nav li {
+    padding: 0 10px;
+    font-weight: 600;
+    color: #fff
+}
+ul.sorteren-nav li a {
+    text-decoration: none;
+    color: #fff;
+}
+ul.sorteren-nav li:last-of-type {
+    flex-grow: 1;
+    text-align: right;
+    font-size: 14px;
+}
+ul.sorteren-nav li:last-of-type span {
+    text-decoration: underline;
+    font-size: 17px
+}
+.filter-categorie {
+    display: flex;
+    justify-content: flex-start;
+}
+nav.categorie {
+    background: #4CCF66;
+    margin-right: 20px;
+    display: inline-block;
+    text-align: left;
+    width: 41%;
+    height: 100%;
+}
+nav.categorie h2 {
+    margin: 0;
+    color: #fff;
+    padding: 10px 15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+nav.categorie li a {
+    text-align: left;
+    padding: 0;
+}
+i.fas.fa-chevron-down {
+    font-size: 32px;
+}
+i.fas.fa-chevron-down.sub {
+    margin: 0;
+    font-size: 25px;
+    position: relative;
+    right: 0;
+}
+.menu-categorie {
+    opacity: 0;
+    height: 0;
+    transition: all .3s ease;
+}
+.uitklapeffect1 {
+    opacity: 1;
+    height: 100%;
+}
+.menu-categorie li {
+    padding: 0;
+}
+ul.menu-categorie {
+    padding-left: 0;
+    margin: 10px 0 0 0;
+    list-style: none;
+}
+ul.menu-categorie-muziek {
+    list-style: none;
+    padding-left: 10px;
+    opacity: 0;
+    height: 0;
+    transition: all .3s ease;
+}
+.uitklapeffect2 {
+    opacity: 1 !important;
+    height: 100% !important;
+}
+ul.menu-categorie.uitklapeffect1 li {
+    padding: 10px;
+}
+ul.menu-categorie.uitklapeffect1 li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+li.light-green {
+    background: #c5ebc8;
+}
+li.active-categorie {
+    background: #8e9ee2;
+}
+li.dark-green {
+    background: #b3e5b6;
+}
+section.artiesten {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+article:first-child {
+    margin-right: 20px;
+}
+/*
+.artiest.left {
+    margin-right: 20px;
+}
+*/
+.artiest {
+    background: #4CCF66;
+    padding: 20px;
+    width: 45%;
+}
+.artiest h2 a {
+    color: #fff;
+    text-decoration: none;
+}
+.meta-data-artiest {
+    display: flex;
+    justify-content: flex-start;
+    list-style: none;
+    padding: 0;
+}
+.meta-data-artiest li img {
+    height: 25px;
+    width: auto;
+    margin-right: 20px;
+}
+.categorie-naam {
+    margin-left: auto;
+    background: #000;
+    color: #fff;
+    font-weight: 600;
+    padding: 10px 20px;
+}
+.artiest {
+    color: #fff;
+    text-align: left;
+    margin-bottom: 0px;
+}
+.artiest h2 {
+    font-family: 'Coiny', cursive;
+    color: #fff;
+    font-size: 30px;
+    margin: 0 0 20px;
+}
+.artiest h3 {
+    margin-bottom: 0px;
+    font-size: 12px;
+}
+.artiest-foto {
+    max-width: 100%;
+}
+
+/*ARTIEST DETAIL PAGINA*/
+
+#video-1 {
+    width: 100%;
+}
+.artiets-detail {
+    height: 15vw;
+    background: none;
+}
+.artiest.informatie {
+    margin: 0 auto;
+    width: 65%;
+    margin-bottom: 20px;
+}
+.artiesten.informatie {
+    display: block;
+    margin: 30px 0 30px 0;
+}
+.artiest.informatie h2 {
+    font-size: 5em;
+}
+.artiest.informatie h3 {
+    font-size: 1.5em;
+}
+section.artiest-last {
+    background: blue;
+    width: 65%;
+    margin: 0 auto;
+    display: flex;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+iframe.twenty-video {
+    width: 630px;
+    height: 355px;
+}
+.socials {
+    text-align: left;
+    list-style: none;
+}
+.socials li a {
+    color: #fff;
+    text-decoration: none;
+}
+.socials h4 {
+    color: 
+    #fff;
+    margin: 0 0 10px 0;
+}
+.artiest.informatie ul.meta-data-artiest li img {
+    height: 40px;
+}
+.artiest-footer {
+    margin: 0 auto;
+    background-image: url(../images/artiesten/twenty.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 300px;
+}
+#video-2 {
+    width: 100%;
+    border: 20px solid #4CCF66;
+}
+
+
+/*FORM*/
+
+main.tickets {
+    text-align: left;
+}
+form section {
+    display: flex;
+}
+form section fieldset p label {
+    width: 140px;
+    display: inline-block;
+    text-align: right;
+    padding-right: 6px;
+}
+fieldset {
+    width: 100%;
+    background: #0125CC;
+    color: #fff;
+    border: none;
+}
+fieldset:first-child {
+    background: #4CCF66;
+}
+fieldset:last-child {
+    background: #0125CC;
+}
+fieldset p {
+    text-align: left;
+}
+fieldset ul {
+    padding: 0;
+    margin: 0;   
+}
+fieldset ul li {
+    display: inline-block;
+}
+legend {
+    padding-top: 50px;
+    font-weight: bold;
+    font-size: 18px;
+}
+/*https://developer.mozilla.org/en-US/docs/Web/CSS/:checked*/
+fieldset:first-child input[type="radio"]:checked {
+    box-shadow: 0 0 0 1.5px #0125CC;
+    transition: all .3s ease;
+}
+fieldset:last-child input[type="radio"]:checked {
+    box-shadow: 0 0 0 1.5px #4CCF66;
+    transition: all .3s ease;
+}
+fieldset:first-child input:focus {
+    color: #0125CC;
+    border: 2px solid #0125CC;
+    transition: all .3s ease;
+}
+fieldset:last-child input:focus {
+    color: #5069dd;
+    border: 2px solid #5069dd;
+    transition: all .3s ease;
+}
+fieldset:first-child input:valid {
+    border: 2px solid #26a840;
+    transition: all .3s ease;
+}
+fieldset:last-child input:valid {
+    border: 2px solid #26a840;
+    transition: all .3s ease;
+}
+fieldset:invalid p.feedback {
+  display:none;
+}
+fieldset:valid p.feedback {
+  display: block;
+  padding: .25em;
+  color: white;
+  background: #0125CC;
+}
+fieldset:valid p.feedback.groen {
+  background: #4CCF66;
+}
+#huisnummer {
+    width: 40px;
+}
+#toevoeging {
+    width: 40px;
+}
+.toev {
+    width: 104px;
+}
+#postcode {
+    width: 60px;
+}
+input[type="submit"] {
+    background: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #0125CC;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    border: 2px solid #0125CC;
+    font-size: 15px;
+    display: block;
+    margin: 20px auto;
+    transition: padding-top .3s ease-in .3s, padding-bottom .3s ease-out .2s, padding-left .3s ease-in .3s, padding-right .3s ease-out .2s, transform .3s ease-out .2s; 
+}
+input[type="submit"]:hover {
+    border: 2px solid #0125CC;
+    font-size: 15px;
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 150px;
+    padding-right: 150px;
+    transform: translateX(100%);
+}
+
+
+/*RESPONSIVE*/
+@media screen and (max-width: 1400px) {
+    .artiest.informatie {
+        width: 95%;
+    }
+    section.artiest-last {
+        width: 95%;
+    }
+    .artiest.informatie ul.meta-data-artiest li img {
+        height: 25px;
+    }
+    .artiest.informatie h3 {
+        font-size: 1.2em;
+    }
+    .artiest.informatie h2 {
+        font-size: 3em;
+    }
+    .artiest-footer {
+        padding: 170px;
+    }
+    i.fas.fa-chevron-down {
+        margin-left: 34px;
+    }
+@media screen and (max-width: 1000px) {
+    nav.hoofdmenu ul li a {
+        font-size: 15px;
+    }
+    input[type="text"]::-webkit-input-placeholder {
+        font-size: 15px;
+    }
+    .artiest h2 {
+        font-size: 20px;
+        margin: 0 0 10px;
+    }
+    .artiest h3 {
+        margin-bottom: 0px;
+        font-size: 11px;
+    }
+    form section {
+        flex-wrap: wrap;
+    }
+    .categorie-naam {
+        font-size: 10px;
+    }
+    h2.categorie-titel {
+        font-size: 20px;
+    }
+    i.fas.fa-chevron-down {
+        font-size: 30px;
+        margin-left: 10px;
+    }
+}
+    
+@media screen and (max-width: 850px) {
+    nav.hoofdmenu ul li {
+        padding: 0px 0;
+    }
+    nav.hoofdmenu ul li a {
+        font-size: 12px;
+    }
+
+    input[type="text"]::-webkit-input-placeholder {
+        font-size: 12px;
+    }
+    .artiesten {
+        flex-wrap: wrap;
+    }
+    .artiest {
+        width: 100%;
+    }
+    .artiest:last-child {
+        margin-bottom: 70px;
+    }
+    .artiest h2 {
+        font-size: 35px;    
+    }
+    .artiest.left {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    h1.pagina-titel {
+        padding: 10px;
+        font-size: 35px;
+    }
+}
+
+@media screen and (max-width: 787px) {
+    nav.hoofdmenu {
+        display: none;
+    }
+    .hoofdmenu.responsive {
+        display: inherit;
+        background: #0125CC;
+    }
+    li.menu-meer {
+        display: block;
+        transition-duration: 0.5s;
+    }
+    li.menu-meer:hover {
+        cursor: pointer;
+    }
+    ul li.menu-meer ul {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        transition: all 0.5s ease;
+        margin-top: 1rem;
+        right: 10px;
+        display: none;
+    }
+    ul li.menu-meer:hover > ul,
+    ul li.menu-meer ul:hover {
+        visibility: visible;
+        opacity: 1;
+        display: block;
+        text-align: left;
+        padding: 10px 10px 10px 10px;
+    }
+    ul li.menu-meer ul li {
+        clear: both;
+        width: 100%;
+    }
+    .artiesten {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    .filter-categorie {
+        flex-wrap: wrap;
+    }
+    nav.categorie {
+        margin: 0 0 20px 0;
+        width: 100%;
+    }
+    i.fas.fa-chevron-down {
+        margin-left: 204px;
+    }
+    .artiest.informatie h3 {
+        font-size: 1em;
+    }
+    .artiest.informatie h2 {
+        font-size: 2em;
+    }
+    .artiest-footer {
+        padding: 60px;
+    }
+    section.artiest-last {
+        flex-wrap: wrap;
+    }
+    .categorie-naam {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    main {
+        padding: 0 5vw;
+    }
+    i.fas.fa-chevron-down {
+        margin-left: 140px;
+    }
+    .artiest.informatie {
+        width: 90%;
+        margin-top: 20px;
+    }
+    .artiest.informatie h2 {
+        font-size: 2.5em;
+        line-height: 1.2em;
+    }
+    section.artiest-last {
+        width: 90%;
+    }
+    #video-2 {
+        border: 5px solid #4CCF66;
+    }
+    fieldset ul li {
+        display: block;
+    }
+    section fieldset p label {
+        width: 140px;
+    }
+}
+@media screen and (max-width: 400px) {
+
+    section fieldset p label {
+        width: 0;
+        display: block;
+    }
+}
+
+/*Responsive pro */
+
+/*https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme*/
+@media (prefers-color-scheme: dark) {
+    main { 
+        background:  #000; 
+        color: #fff; 
+    }
+}
+
+@media (prefers-color-scheme: light) {
+  main { 
+      background: #fff; 
+      color: #000; 
+    }
+}
