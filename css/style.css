@@ -6,6 +6,7 @@ body {
 main {
     text-align: center;
     padding: 0 9vw;
+    margin-bottom: 20px;
 }
 .active-item {
     border-bottom: 2px solid #fff;
@@ -28,7 +29,7 @@ header h1, h2 {
     color: #fff;
 }
 h1 {
-    font-size: 50px;
+    font-size: 3.2em;
     margin-bottom: 10px;
     font-family: 'Coiny', cursive;
 }
@@ -104,7 +105,7 @@ nav.hoofdmenu ul li a.active:after {
 .hoofdmenu.responsive {
     display: none;
 }
-.logo-nav {
+nav.hoofdmenu img {
     width: 20px;
     height: auto;
 }
@@ -119,20 +120,12 @@ input[type="text"]::-webkit-input-placeholder {
     font-family: 'Open Sans', sans-serif;
     font-weight: 800;
     text-transform: uppercase;
-    font-size: 15px;
-}
-.fa-search {
-    color: #fff;
+    font-size: 0.9em;
 }
 
 
 /*PROGRAMMA*/
 
-/*
-.filter-sorteren {
-    background-color: #a3a3a3;
-}
-*/
 ul.sorteren-nav {
     background-color: #a3a3a3;
     display: flex;
@@ -153,17 +146,17 @@ ul.sorteren-nav li a {
 ul.sorteren-nav li:last-of-type {
     flex-grow: 1;
     text-align: right;
-    font-size: 14px;
+    font-size:  0.87em;
 }
 ul.sorteren-nav li:last-of-type span {
     text-decoration: underline;
-    font-size: 17px
+    font-size: 1.06em;
 }
-.filter-categorie {
+section.filter-categorie {
     display: flex;
     justify-content: flex-start;
 }
-nav.categorie {
+section.filter-categorie nav {
     background: #4CCF66;
     margin-right: 20px;
     display: inline-block;
@@ -171,26 +164,27 @@ nav.categorie {
     width: 41%;
     height: 100%;
 }
-nav.categorie h2 {
+section.filter-categorie nav h2 {
     margin: 0;
     color: #fff;
     padding: 10px 15px 0 15px;
     display: flex;
     justify-content: space-between;
 }
-nav.categorie li a {
+section.filter-categorie nav li a {
     text-align: left;
     padding: 0;
 }
 i.fas.fa-chevron-down {
-    font-size: 32px;
+    font-size: 1.6em;
 }
 i.fas.fa-chevron-down.sub {
     margin: 0;
-    font-size: 25px;
+    font-size: 1.56em;
     position: relative;
     right: 0;
 }
+/*class voor javascript*/
 .menu-categorie {
     opacity: 0;
     height: 0;
@@ -203,21 +197,21 @@ i.fas.fa-chevron-down.sub {
 .menu-categorie li {
     padding: 0;
 }
-ul.menu-categorie {
+section.filter-categorie nav ul {
     padding-left: 0;
     margin: 10px 0 0 0;
     list-style: none;
 }
-ul.menu-categorie-muziek {
+section.filter-categorie nav ul.menu-categorie-muziek {
     list-style: none;
     padding-left: 10px;
-    opacity: 0;
     height: 0;
+    visibility: hidden;
     transition: all .3s ease;
 }
 .uitklapeffect2 {
-    opacity: 1 !important;
     height: 100% !important;
+    visibility: visible !important;
 }
 ul.menu-categorie.uitklapeffect1 li {
     padding: 10px;
@@ -227,16 +221,19 @@ ul.menu-categorie.uitklapeffect1 li a {
     text-decoration: none;
     font-weight: 600;
 }
-li.light-green {
-    background: #c5ebc8;
+ul.menu-categorie li {
+    background: #c5ebc8;   
 }
-li.active-categorie {
+ul.menu-categorie li:nth-child(odd) { 
+    background: #b3e5b6; 
+}
+ul.menu-categorie li:first-of-type {
     background: #8e9ee2;
 }
-li.dark-green {
-    background: #b3e5b6;
+.menu-categorie-muziek.uitklapeffect2 li {
+    background: none !important;
 }
-section.artiesten {
+section.filter-categorie section {
     display: flex;
     justify-content: space-between;
     height: 100%;
@@ -244,80 +241,90 @@ section.artiesten {
 article:first-child {
     margin-right: 20px;
 }
-/*
-.artiest.left {
-    margin-right: 20px;
-}
-*/
-.artiest {
+article {
     background: #4CCF66;
     padding: 20px;
     width: 45%;
+    color: #fff;
+    text-align: left;
+    margin-bottom: 0px;
 }
-.artiest h2 a {
+article h2 {
+    font-family: 'Coiny', cursive;
+    color: #fff;
+    font-size: 1.87em;
+    margin: 0 0 20px;
+}
+article h2 a {
     color: #fff;
     text-decoration: none;
 }
-.meta-data-artiest {
+article h3 {
+    margin-bottom: 0px;
+    font-size: 0.75em;
+}
+article ul {
     display: flex;
     justify-content: flex-start;
     list-style: none;
     padding: 0;
 }
-.meta-data-artiest li img {
+article ul li img {
     height: 25px;
     width: auto;
     margin-right: 20px;
 }
-.categorie-naam {
+article ul li:last-child {
     margin-left: auto;
     background: #000;
     color: #fff;
     font-weight: 600;
     padding: 10px 20px;
 }
-.artiest {
-    color: #fff;
-    text-align: left;
-    margin-bottom: 0px;
-}
-.artiest h2 {
-    font-family: 'Coiny', cursive;
-    color: #fff;
-    font-size: 30px;
-    margin: 0 0 20px;
-}
-.artiest h3 {
-    margin-bottom: 0px;
-    font-size: 12px;
-}
-.artiest-foto {
+article img {
     max-width: 100%;
 }
 
 /*ARTIEST DETAIL PAGINA*/
 
-#video-1 {
+video {
     width: 100%;
 }
-.artiets-detail {
+section.artiest-informatie {
+    background: #4CCF66;
+    width: 65%;
+    margin: 0 auto;
+    padding: 20px;
+    margin-bottom: 20px;
+    color: #fff;
+    text-align: left;
+}
+section.artiest-informatie h2 {
+    font-family: 'Coiny', cursive;
+    font-size: 4em;
+    margin: 0 0 10px 0;
+}
+section.artiest-informatie h3 {
+    font-size: 1em;
+    margin: 0;
+}
+section.artiest-informatie img {
+    max-width: 100%;
+}
+section.artiest-informatie ul {
+    display: flex;
+    justify-content: flex-start;
+    list-style: none;
+    padding: 0;
+}
+section.artiest-informatie ul li img {
+    height: 35px;
+    width: auto;
+    margin-right: 20px;
+}
+header.artiets-detail {
     height: 15vw;
     background: none;
-}
-.artiest.informatie {
-    margin: 0 auto;
-    width: 65%;
-    margin-bottom: 20px;
-}
-.artiesten.informatie {
-    display: block;
-    margin: 30px 0 30px 0;
-}
-.artiest.informatie h2 {
-    font-size: 5em;
-}
-.artiest.informatie h3 {
-    font-size: 1.5em;
 }
 section.artiest-last {
     background: blue;
@@ -327,38 +334,33 @@ section.artiest-last {
     padding: 20px;
     margin-bottom: 20px;
 }
-iframe.twenty-video {
+iframe {
     width: 630px;
     height: 355px;
 }
-.socials {
+section.artiest-last ul {
     text-align: left;
     list-style: none;
 }
-.socials li a {
+section.artiest-last ul li a {
     color: #fff;
     text-decoration: none;
 }
-.socials h4 {
-    color: 
-    #fff;
+section.artiest-last ul h4 {
+    color: #fff;
     margin: 0 0 10px 0;
 }
-.artiest.informatie ul.meta-data-artiest li img {
-    height: 40px;
-}
-.artiest-footer {
+footer {
     margin: 0 auto;
     background-image: url(../images/artiesten/twenty.png);
     background-repeat: no-repeat;
     background-size: cover;
     padding: 300px;
 }
-#video-2 {
+footer video{
     width: 100%;
     border: 20px solid #4CCF66;
 }
-
 
 /*FORM*/
 
@@ -399,7 +401,7 @@ fieldset ul li {
 legend {
     padding-top: 50px;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 1.12em;
 }
 /*https://developer.mozilla.org/en-US/docs/Web/CSS/:checked*/
 fieldset:first-child input[type="radio"]:checked {
@@ -429,11 +431,11 @@ fieldset:last-child input:valid {
     transition: all .3s ease;
 }
 fieldset:invalid p.feedback {
-  display:none;
+  display: none;
 }
 fieldset:valid p.feedback {
   display: block;
-  padding: .25em;
+  padding: 0.25em;
   color: white;
   background: #0125CC;
 }
@@ -445,9 +447,6 @@ fieldset:valid p.feedback.groen {
 }
 #toevoeging {
     width: 40px;
-}
-.toev {
-    width: 104px;
 }
 #postcode {
     width: 60px;
@@ -463,73 +462,75 @@ input[type="submit"] {
     text-transform: uppercase;
     font-weight: 800;
     border: 2px solid #0125CC;
-    font-size: 15px;
+    font-size: 0.93em;
     display: block;
     margin: 20px auto;
     transition: padding-top .3s ease-in .3s, padding-bottom .3s ease-out .2s, padding-left .3s ease-in .3s, padding-right .3s ease-out .2s, transform .3s ease-out .2s; 
 }
 input[type="submit"]:hover {
     border: 2px solid #0125CC;
-    font-size: 15px;
+    font-size: 0.93em;
     position: relative;
     padding-top: 50px;
     padding-bottom: 50px;
     padding-left: 150px;
     padding-right: 150px;
     transform: translateX(100%);
+    transform: rotate3d(1, 1, 1, 45deg);
 }
 
 
 /*RESPONSIVE*/
 @media screen and (max-width: 1400px) {
-    .artiest.informatie {
+    section.artiest-last, section.artiest-informatie {
         width: 95%;
     }
-    section.artiest-last {
-        width: 95%;
-    }
-    .artiest.informatie ul.meta-data-artiest li img {
-        height: 25px;
-    }
-    .artiest.informatie h3 {
+    section.artiest-informatie h3 {
         font-size: 1.2em;
     }
-    .artiest.informatie h2 {
+    section.artiest-informatie h2 {
         font-size: 3em;
     }
-    .artiest-footer {
+    section.artiest-informatie ul li img {
+        height: 25px;
+    }
+    footer {
         padding: 170px;
     }
     i.fas.fa-chevron-down {
         margin-left: 34px;
     }
+    
 @media screen and (max-width: 1000px) {
     nav.hoofdmenu ul li a {
-        font-size: 15px;
+        font-size: 0.93em;
     }
     input[type="text"]::-webkit-input-placeholder {
-        font-size: 15px;
+        font-size: 0.93em;
     }
-    .artiest h2 {
-        font-size: 20px;
+    article h2 {
+        font-size: 1.25em;
         margin: 0 0 10px;
     }
-    .artiest h3 {
+    article h3 {
         margin-bottom: 0px;
-        font-size: 11px;
+        font-size: 0.68em;
     }
     form section {
         flex-wrap: wrap;
     }
     .categorie-naam {
-        font-size: 10px;
+        font-size: 0.62em;
     }
     h2.categorie-titel {
-        font-size: 20px;
+        font-size: 1.25em;
     }
     i.fas.fa-chevron-down {
-        font-size: 30px;
+        font-size: 1.87em;
         margin-left: 10px;
+    }
+    header.artiets-detail {
+        margin-bottom: 20px;
     }
 }
     
@@ -538,31 +539,30 @@ input[type="submit"]:hover {
         padding: 0px 0;
     }
     nav.hoofdmenu ul li a {
-        font-size: 12px;
+        font-size: 0.75em;
     }
-
     input[type="text"]::-webkit-input-placeholder {
-        font-size: 12px;
+        font-size: 0.75em;
     }
-    .artiesten {
+    section.filter-categorie section {
         flex-wrap: wrap;
     }
-    .artiest {
+    article {
         width: 100%;
     }
-    .artiest:last-child {
+    article:last-child {
         margin-bottom: 70px;
     }
-    .artiest h2 {
-        font-size: 35px;    
+    article h2 {
+        font-size: 2.18em;    
     }
-    .artiest.left {
+    article.left {
         margin-right: 0;
         margin-bottom: 20px;
     }
     h1.pagina-titel {
         padding: 10px;
-        font-size: 35px;
+        font-size: 2.18em;
     }
 }
 
@@ -602,7 +602,7 @@ input[type="submit"]:hover {
         clear: both;
         width: 100%;
     }
-    .artiesten {
+    section.artiesten {
         flex-wrap: wrap;
     }
 }
@@ -612,20 +612,20 @@ input[type="submit"]:hover {
     .filter-categorie {
         flex-wrap: wrap;
     }
-    nav.categorie {
+    section.filter-categorie nav {
         margin: 0 0 20px 0;
         width: 100%;
     }
     i.fas.fa-chevron-down {
         margin-left: 204px;
     }
-    .artiest.informatie h3 {
+    section.artiest-informatie h3 {
         font-size: 1em;
     }
-    .artiest.informatie h2 {
+    section.artiest-informatie h2 {
         font-size: 2em;
     }
-    .artiest-footer {
+    footer {
         padding: 60px;
     }
     section.artiest-last {
@@ -644,15 +644,7 @@ input[type="submit"]:hover {
     i.fas.fa-chevron-down {
         margin-left: 140px;
     }
-    .artiest.informatie {
-        width: 90%;
-        margin-top: 20px;
-    }
-    .artiest.informatie h2 {
-        font-size: 2.5em;
-        line-height: 1.2em;
-    }
-    section.artiest-last {
+    section.artiest-last, section.artiest-informatie {
         width: 90%;
     }
     #video-2 {
