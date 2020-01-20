@@ -22,6 +22,9 @@ a::after {
 a:hover::after {
     width: 100%;
 }
+a.noline:hover::after {
+    width: 0;
+}
 
 
 /*TEKST*/
@@ -213,21 +216,21 @@ section.filter-categorie nav ul.menu-categorie-muziek {
     height: 100% !important;
     visibility: visible !important;
 }
-ul.menu-categorie.uitklapeffect1 li {
-    padding: 10px;
+section.filter-categorie nav ul.uitklapeffect1 li {
+    padding: 10px; 
 }
-ul.menu-categorie.uitklapeffect1 li a {
+section.filter-categorie nav ul.uitklapeffect1 li a {
     color: #fff;
     text-decoration: none;
     font-weight: 600;
 }
-ul.menu-categorie li {
+section.filter-categorie nav ul li {
     background: #c5ebc8;   
 }
-ul.menu-categorie li:nth-child(odd) { 
+section.filter-categorie nav ul li:nth-child(odd) { 
     background: #b3e5b6; 
 }
-ul.menu-categorie li:first-of-type {
+section.filter-categorie nav ul li:first-of-type {
     background: #8e9ee2;
 }
 .menu-categorie-muziek.uitklapeffect2 li {
@@ -403,15 +406,6 @@ fieldset div {
 fieldset div div {
     margin-right: 20px;
 }
-/*
-fieldset ul {
-    padding: 0;
-    margin: 0;   
-}
-fieldset ul li {
-    display: inline-block;
-}
-*/
 legend {
     padding-top: 50px;
     font-weight: bold;
@@ -479,18 +473,21 @@ input[type="submit"] {
     font-size: 0.93em;
     display: block;
     margin: 20px auto;
-    transition: padding-top .3s ease-in .3s, padding-bottom .3s ease-out .2s, padding-left .3s ease-in .3s, padding-right .3s ease-out .2s, transform .3s ease-out .2s; 
+    transition: padding-top .3s ease-out .3s, padding-bottom .2s ease-out .3s, padding-left .2s ease-out .3s, padding-right .2s ease-out .3s, transform .5s ease-in .3s, opacity .8s ease-out .3s;
 }
+/*https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate3d*/
 input[type="submit"]:hover {
     border: 2px solid #0125CC;
     font-size: 0.93em;
     position: relative;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    padding-left: 150px;
-    padding-right: 150px;
-    transform: translateX(100%);
-    transform: rotate3d(1, 1, 1, 45deg);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    height: 100px;
+    transform: translateX(300%);
+    transform: rotate3d(2, -1, -1, -0.2turn);
+    opacity: 0;
 }
 
 
