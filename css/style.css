@@ -283,6 +283,10 @@ article ul li:last-child {
 }
 article img {
     max-width: 100%;
+    transition: all .4s ease;
+}
+article img:hover {
+    opacity: 0.7;
 }
 
 /*ARTIEST DETAIL PAGINA*/
@@ -391,6 +395,15 @@ fieldset:last-child {
 fieldset p {
     text-align: left;
 }
+fieldset div {
+    display: flex;
+    align-content: flex-start;
+    padding-bottom: 5px;
+}
+fieldset div div {
+    margin-right: 20px;
+}
+/*
 fieldset ul {
     padding: 0;
     margin: 0;   
@@ -398,6 +411,7 @@ fieldset ul {
 fieldset ul li {
     display: inline-block;
 }
+*/
 legend {
     padding-top: 50px;
     font-weight: bold;
@@ -494,12 +508,21 @@ input[type="submit"]:hover {
     section.artiest-informatie ul li img {
         height: 25px;
     }
+    fieldset div div {
+        margin-right: 10px;
+    }
     footer {
         padding: 170px;
     }
     i.fas.fa-chevron-down {
         margin-left: 34px;
     }
+}
+    
+@media screen and (max-width: 1250px) {
+    fieldset div {
+        flex-wrap: wrap;
+}
     
 @media screen and (max-width: 1000px) {
     nav.hoofdmenu ul li a {
@@ -647,7 +670,7 @@ input[type="submit"]:hover {
     section.artiest-last, section.artiest-informatie {
         width: 90%;
     }
-    #video-2 {
+    footer video {
         border: 5px solid #4CCF66;
     }
     fieldset ul li {
@@ -657,13 +680,12 @@ input[type="submit"]:hover {
         width: 140px;
     }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
 
-    section fieldset p label {
+    form section fieldset p label {
         width: 0;
         display: block;
     }
-}
 
 /*Responsive pro */
 
