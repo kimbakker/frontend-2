@@ -2,7 +2,7 @@
 Voor het vak Frontend Development heb ik mijn herontwerp van Informatie Architectuur omgezet naar html/css en Javascript.
 
 **Live versie**
-https://kimbakker.github.io/frontend/
+https://kimbakker.github.io/frontend-2/
 
 **Feedback momenten**
 
